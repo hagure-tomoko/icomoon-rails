@@ -17,7 +17,6 @@ class SourceFile < Thor
     if File.exist? "#{@extract_path}/lte-ie7.js"
       copy_file "#{@extract_path}/lte-ie7.js", "javascripts/#{@name}/lte-ie7.js"
     end
-    copy_file "#{@extract_path}/license.txt", "stylesheets/#{@name}/license.txt"
     empty_directory "fonts/#{@name}"
     directory "#{@extract_path}/fonts", "fonts/#{@name}"
   end
